@@ -1,8 +1,15 @@
+### dependencies ###
+/node_modules
+/api/node_modules
+
 HELP.md
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+
+### Logging ###
+yarn-error.log
 
 ### STS ###
 .apt_generated
