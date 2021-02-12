@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import * as Order from '../model/order'
+import * as Order from '../models/order'
 
 export const OrderController: Router = Router();
 
