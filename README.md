@@ -9,4 +9,10 @@ Based a list of requirements the tasks were to:
 
 ## Getting Started
 
-To get started, clone this repo and run `yarn` in your terminal at the project root.
+To get started, clone this repo and run `yarn` in your terminal at the project root. Yarn will install the following dependencies: 
+- express
+- typescript
+- cors
+- db-migrate
+- request
+- jasmine
