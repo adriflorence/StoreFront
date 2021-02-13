@@ -3,4 +3,5 @@ import * as Order from '../models/order'
 
 export const OrderController: Router = Router();
 
-OrderController.get('/:user_id', Order.getOrderByUserId);
+OrderController.get('/:ud', Order.getOrderById)
+OrderController.get('/:user_id', Order.getOrdersByUserId);
