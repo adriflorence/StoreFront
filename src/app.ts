@@ -4,7 +4,7 @@ import cors from 'cors';
 
 import { routes } from './api/routes';
 
-export const app: express.Application = express();
+export const app: Application = express();
 
 // parse requests of content-type application/json
 app.use(bodyParser.json())

@@ -1,7 +1,7 @@
 import { Application, Router } from 'express';
 import { UserController } from './controllers/UserController';
-import { ProductController } from './controllers/productController';
-import { OrderController } from './controllers/orderController';
+import { ProductController } from './controllers/ProductController';
+import { OrderController } from './controllers/OrderController';
 
 export const routes = (app: Application) => {
     app.use('/users', UserController);
