@@ -41,7 +41,7 @@ export const getById = (req: Request, res: Response) => {
 // delete product by id
 export const deleteById = (req: Request, res: Response) => {
     const id = parseInt(req.params.id);
-    database.query(`DELETE FROM users WHERE id = $1`, [id], (error, results) => {
+    database.query(`DELETE FROM products WHERE id = $1`, [id], (error, results) => {
         if (error) {
             throw error
         } else {
