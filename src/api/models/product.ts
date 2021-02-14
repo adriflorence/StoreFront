@@ -6,22 +6,22 @@ import { database } from '../database/database';
 export const create = (req: Request, res: Response) => {
     const { name, price, category_id } = req.body;
     database.query(`INSERT INTO products (name, price, category_id) VALUES($1, $2, $3) RETURNING *`,
-        [name, price, category_id], (error, user) => {
+        [name, price, category_id], (error, product) => {
         if (error) {
             throw error
         } else {
-            res.json(user);
+            res.json(product);
         }
     });
 }
 
 // get all products
 export const getAll = (req: Request, res: Response) => {
-    database.query(`SELECT * FROM products ORDER BY id ASC;`, (error, results) => {
+    database.query(`SELECT * FROM products ORDER BY id ASC;`, (error, products) => {
         if (error) {
             throw error
         } else {
-            res.json(results);
+            res.json(products);
         }
     });
 };
@@ -41,7 +41,7 @@ export const getById = (req: Request, res: Response) => {
 // delete product by id
 export const deleteById = (req: Request, res: Response) => {
     const id = parseInt(req.params.id);
-    database.query(`DELETE FROM products WHERE id = $1`, [id], (error, results) => {
+    database.query(`DELETE FROM products WHERE id = $1`, [id], (error) => {
         if (error) {
             throw error
         } else {
