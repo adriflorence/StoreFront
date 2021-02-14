@@ -1,11 +1,14 @@
 import { Response, Request } from 'express';
 import { database } from '../database/database';
+import bcrypt from 'bcrypt';
 
 // create new user
 export const addNewUser = (req: Request, res: Response) => {
     const { firstName, lastName, password } = req.body;
+    const saltRounds = 10; // cost factor, the larger the number the longer it takes to hash
+    const hashedPassword = bcrypt.hashSync(password, saltRounds);
     database.query(`INSERT INTO users (firstName, lastName, password) VALUES($1, $2, $3) RETURNING *`,
-        [firstName, lastName, password], (error, user) => {
+        [firstName, lastName, hashedPassword], (error, user) => {
         if (error) {
             throw error
         } else {
