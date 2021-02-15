@@ -49,7 +49,7 @@ Table: Books (id:varchar, title:varchar, author:varchar, published_year:varchar,
 | id : serial PK       |
 | name : varchar(50)   |
 | price : int          |
-| category_id : int FK |
+| category_id : int FK | [foreign key to category table]
 
 ***
 
