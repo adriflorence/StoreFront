@@ -28,6 +28,11 @@
     "@types/jsonwebtoken": "^8.5.0",
     "@types/pg": "^7.14.9",
     "jasmine": "^3.6.4",
-    "tsc-watch": "^4.2.9"
+    "request": "^2.88.2",
+    "ts-loader": "^8.0.17",
+    "tsc-watch": "^4.2.9",
+    "webpack": "^5.21.2",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
   }
 }
