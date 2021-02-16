@@ -38,6 +38,17 @@ export const getById = (req: Request, res: Response) => {
     });
 }
 
+export const getLastProductIdFromDatabase = (req: Request, res: Response) => {
+    database.query(`SELECT id FROM products ORDER BY id DESC LIMIT 1`, (error, product) => {
+        if (error) {
+            throw error
+        } else {
+            // return largest (latest) product id from database
+            res.json(product.rows[0].id);
+        }
+    });
+}
+
 // delete product by id
 export const deleteById = (req: Request, res: Response) => {
     const id = parseInt(req.params.id);
