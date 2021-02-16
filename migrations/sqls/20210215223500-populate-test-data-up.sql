@@ -28,3 +28,6 @@ INSERT INTO products (name, price, category_id)
 /* populate orders table */
 INSERT INTO orders (product_id, quantity, user_id, status)
   VALUES (currval('products_id_seq'), 1, currval('users_id_seq'), 'complete');
+
+INSERT INTO orders (product_id, quantity, user_id, status)
+  VALUES (currval('products_id_seq'), 2, currval('users_id_seq'), 'in transit');

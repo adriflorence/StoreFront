@@ -26,4 +26,12 @@ describe('GET user by id', () => {
             done();
         });
     });
+    it('Should return Testy McTester as user with id 1', (done) => {
+        Request.get(`${url}/users/1`, (error, response) => {
+            const user1 = JSON.parse(response.body).rows[0];
+            expect(user1.firstname).toBe('Testy');
+            expect(user1.lastname).toBe('McTester');
+            done();
+        });
+    });
 });

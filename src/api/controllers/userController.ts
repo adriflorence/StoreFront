@@ -6,5 +6,5 @@ export const UserController: Router = Router();
 
 UserController.get('/', User.getAll);
 UserController.get('/:id', User.getById);
-UserController.post('/create', authToken, User.addNewUser);
+UserController.post('/', authToken, User.addNewUser);
 UserController.delete('/:id', authToken, User.deleteById);
