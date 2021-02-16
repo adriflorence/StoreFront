@@ -73,15 +73,15 @@ Table: Books (id:varchar, title:varchar, author:varchar, published_year:varchar,
 | Order                    |
 | ------------------------ |
 | id : serial PK           |
-| user_id : bigint         |
+| user_id : bigint         | [foreign key to user table]
 | status : varchar (100)   |
 
 ***
 
 | Product_Order            |
 | ------------------------ |
-| order_id : bigint PK     |
-| product_id : bigint PK   |
+| order_id : bigint PK     | [foreign key to order table]
+| product_id : bigint PK   | [foreign key to product table]
 | quantity : int           |
 
 

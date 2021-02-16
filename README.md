@@ -53,3 +53,15 @@ Yarn will install the following dependencies (these can be installed independent
 
 Run the following command from the root directory:
 `db-migrate up -m ./database/migrations --config ./database/config/dev.json `
+
+This will create the tables, constraints and populate the database with some initial test data.
+
+#### Testing
+
+Once this is all set up, compile the code
+
+`yarn watch`
+
+and run the Jasmine tests:
+
+`npm test`
